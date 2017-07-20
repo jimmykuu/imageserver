@@ -20,6 +20,7 @@ var (
 	// Server 使用文件名提供 server 服务
 	Server = imageserver.Server(imageserver.ServerFunc(func(params imageserver.Params) (*imageserver.Image, error) {
 		source, err := params.GetString(imageserver_source.Param)
+
 		if err != nil {
 			return nil, err
 		}
